@@ -2,7 +2,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
-import { JavaScript, React, ReactVite, HTMLCSS, SQL, TailwindCSS, TypeScript, Php, Python } from "../assets";
+import { JavaScript, React, ReactVite, HTMLCSS, SQL, Tailwind, Typescript, Php, Python } from "../assets";
 
 function Services() {
 
@@ -35,7 +35,7 @@ function Services() {
           name: "Tailwind CSS",
           description:
             "Proficient in styling web applications with utility-first CSS framework.",
-          image:TailwindCSS,
+          image:Tailwind,
         },
         {
           name: "React Vite",
@@ -47,7 +47,7 @@ function Services() {
           name: "TypeScript",
           description:
             "Good understanding of type-safe development with TypeScript.",
-          image: TypeScript,
+          image: Typescript,
         },
         {
           name: "PHP",
