@@ -2,6 +2,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import { JavaScript, React, ReactVite, HTMLCSS, SQL, TailwindCSS, TypeScript, Php, Python } from "../assets";
 
 function Services() {
 
@@ -10,55 +11,55 @@ function Services() {
           name: "SQL",
           description:
             "Proficient in creating, managing, and querying databases.",
-          image: "sql-image-url",
+          image: SQL,
         },
         {
           name: "JavaScript",
           description:
             "Experienced in building dynamic and interactive web applications.",
-          image: "javascript-image-url",
+          image: JavaScript,
         },
         {
           name: "HTML and CSS",
           description:
             "Expert in crafting semantic and responsive web designs.",
-          image: "html-css-image-url",
+          image: HTMLCSS,
         },
         {
           name: "React",
           description:
             "Skilled in building reusable components and managing application state.",
-          image: "react-image-url",
+          image: React,
         },
         {
           name: "Tailwind CSS",
           description:
             "Proficient in styling web applications with utility-first CSS framework.",
-          image: "tailwind-image-url",
+          image:TailwindCSS,
         },
         {
           name: "React Vite",
           description:
             "Experienced in fast and efficient development with Vite.",
-          image: "vite-image-url",
+          image: ReactVite,
         },
         {
           name: "TypeScript",
           description:
             "Good understanding of type-safe development with TypeScript.",
-          image: "typescript-image-url",
+          image: TypeScript,
         },
         {
           name: "PHP",
           description:
             "Proficient in server-side programming and developing dynamic websites.",
-          image: "php-image-url",
+          image: Php,
         },
         {
           name: "Python (Beginner in Machine Learning)",
           description:
             "Basic understanding of Python and foundational knowledge in machine learning.",
-          image: "python-image-url",
+          image: Python,
         },
       ];
   return (
