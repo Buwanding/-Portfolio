@@ -15,19 +15,19 @@ const projects: Project[] = [
   {
     image: Mobile_PickMeUp, // Changed to absolute path
     title: "Mobile PickMeUp",
-    description: "Description for project 1",
+    description: "Ride hailing app for mobile devices.",
     tags: ["React Native", "Tailwind"],
   },
   {
     image: sams, // Changed to absolute path
     title: "SAMS",
-    description: "Description for project 2",
+    description: "Student Monitoring System for schools.",
     tags: ["html", "css", "javascript", "php"],
   },
   {
     image: Web_PickMeUp, // Changed to absolute path
     title: "Website PickMeUp",
-    description: "Description for project 2",
+    description: "For Admins to manage the Pick Me Up mobile users.",
     tags: ["React", "Tailwind"],
   },
 ];
