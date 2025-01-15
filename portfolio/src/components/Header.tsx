@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Portfolio from "../assets/portfolio.png";
 
@@ -14,15 +14,11 @@ function Header() {
   return (
     <header>
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 shadow-md">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen ">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img
-              src={Portfolio}
-              className="mr-3 h-8 sm:h-10"
-              alt="Logo"
-            />
-            <span className="self-center text-2xl font-bold text-blue-500 whitespace-nowrap">
+          <Link to="/" className="flex items-start ml-10">
+            <img src={Portfolio} className="mr-3 h-8 sm:h-10" alt="Logo" />
+            <span className="self-center text-2xl font-bold text-blue-500 whitespace-nowrap ">
               Portfolio
             </span>
           </Link>
@@ -64,7 +60,7 @@ function Header() {
               <li>
                 <Link
                   to="/"
-                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0"
+                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0 font-bold"
                 >
                   Home
                 </Link>
@@ -72,7 +68,7 @@ function Header() {
               <li>
                 <Link
                   to="/about-me"
-                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0"
+                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0 font-bold"
                 >
                   About
                 </Link>
@@ -80,7 +76,7 @@ function Header() {
               <li>
                 <Link
                   to="/services"
-                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0"
+                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0 font-bold"
                 >
                   Services
                 </Link>
@@ -88,7 +84,7 @@ function Header() {
               <li>
                 <Link
                   to="/portfolio"
-                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0"
+                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0 font-bold"
                 >
                   Portfolio
                 </Link>
@@ -96,7 +92,7 @@ function Header() {
               <li>
                 <Link
                   to="/contact"
-                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0"
+                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0 font-bold"
                 >
                   Contact
                 </Link>

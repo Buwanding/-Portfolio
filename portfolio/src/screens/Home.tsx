@@ -1,4 +1,4 @@
-import React from "react";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MyPhoto from "../images/MyPhoto.jpg";
@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen px-10">
       <Header />
-      <section className="flex flex-col md:flex-row items-center justify-between min-h-screen bg-white px-6 md:px-16 py-8">
+      <section className="flex flex-col md:flex-row items-center justify-between min-h-screen px-10 md:px-16 py-8">
         {/* Text Section */}
         <motion.div
           className="text-center md:text-left md:w-1/2 space-y-5"

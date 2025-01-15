@@ -35,7 +35,7 @@ function AboutMe() {
                 className="px-4 py-2 mt-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 transform hover:scale-105"
                 whileHover={{ scale: 1.05 }}
               >
-                View My Projects
+                <a href="https://github.com/Buwanding">View My Projects</a>
               </motion.button>
             </div>
           </motion.a>
