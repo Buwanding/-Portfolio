@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import MyPhoto from "../assets/MyPhoto.jpg";
+import { Myphoto } from "../assets";
 import { motion } from "framer-motion";
 
 function Home() {
@@ -73,7 +73,7 @@ function Home() {
             ></motion.div>
             {/* Profile Image */}
             <motion.img
-              src={MyPhoto}
+              src={Myphoto}
               alt="Aladdin"
               className="relative w-56 h-56 rounded-full object-cover shadow-lg md:w-72 md:h-72"
               initial={{ y: 50, opacity: 0 }}

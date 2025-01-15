@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import MyPhoto from "../assets/MyPhoto.jpg";
+import { Myphoto } from "../assets";
 
 function AboutMe() {
   return (
@@ -18,7 +18,7 @@ function AboutMe() {
           >
             <motion.img
               className="object-cover w-full rounded-t-lg h-64 md:h-auto md:w-64 md:rounded-none md:rounded-l-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
-              src={MyPhoto}
+              src={Myphoto}
               alt="My Profile"
               whileHover={{ scale: 1.1 }}
             />

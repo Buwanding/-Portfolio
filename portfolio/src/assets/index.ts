@@ -10,3 +10,4 @@ export { default as HTMLCSS } from "./HTMLCSS.png";
 export { default as React } from "./React.png";
 export { default as TailwindCSS } from "./Tailwind.png";
 export { default as ReactVite } from "./ReactvVite.png";
+export { default as Myphoto } from "./Myphoto.jpg";
