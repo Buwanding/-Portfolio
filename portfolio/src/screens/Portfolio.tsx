@@ -1,58 +1,78 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Mobile_PickMeUp, sams, Web_PickMeUp } from "../assets";
 
-const projects = [
+// Define TypeScript interfaces
+interface Project {
+  image: string;
+  title: string;
+  description: string;
+  tags: string[];
+}
+
+const projects: Project[] = [
   {
-    image: "path/to/image1.jpg",
-    title: "Project 1",
+    image: Mobile_PickMeUp, // Changed to absolute path
+    title: "Mobile PickMeUp",
     description: "Description for project 1",
+    tags: ["React Native", "Tailwind"],
+  },
+  {
+    image: sams, // Changed to absolute path
+    title: "SAMS",
+    description: "Description for project 2",
+    tags: ["html", "css", "javascript", "php"],
+  },
+  {
+    image: Web_PickMeUp, // Changed to absolute path
+    title: "Website PickMeUp",
+    description: "Description for project 2",
     tags: ["React", "Tailwind"],
   },
-  {
-    image: "path/to/image2.jpg",
-    title: "Project 2",
-    description: "Description for project 2",
-    tags: ["JavaScript", "API"],
-  },
-  // Add more projects as needed
 ];
 
-function Portfolio() {
-  // Allow `selectedImage` to be a string (image URL) or null
+const Portfolio: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Image modal handler
+  const handleImageClick = (imageUrl: string) => {
+    setSelectedImage(imageUrl);
+  };
+
+  // Close modal handler
+  const handleCloseModal = () => {
+    setSelectedImage(null);
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header */}
       <Header />
 
-      {/* Main Content */}
       <main className="flex-grow p-4 bg-gray-100 dark:bg-gray-900">
         <section className="py-16 px-4 max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-sky-200">
+          <h2 className="text-3xl font-bold text-center mb-12 text-blue-500">
             Projects
           </h2>
 
-          {/* Projects Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
                 className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-700"
               >
-                {/* Image Section */}
                 <div
                   className="relative h-48 w-full cursor-pointer overflow-hidden group"
-                  onClick={() => setSelectedImage(project.image)} // No error now
+                  onClick={() => handleImageClick(project.image)}
                 >
                   <img
-                    src={project.image}
+                    src={project.image} // Changed to absolute path
                     alt={`Preview of ${project.title}`}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = "path/to/placeholder.jpg"; // Fallback image
+                    onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
+                      const img = e.currentTarget;
+                      img.onerror = null;
+                      img.src = "/images/placeholder.jpg";
                     }}
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
@@ -62,7 +82,6 @@ function Portfolio() {
                   </div>
                 </div>
 
-                {/* Details Section */}
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-sky-200">
                     {project.title}
@@ -85,10 +104,26 @@ function Portfolio() {
         </section>
       </main>
 
-      {/* Footer */}
+      {/* Image Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={handleCloseModal}
+        >
+          <div className="max-w-4xl max-h-[90vh] p-4">
+            <img
+              src={selectedImage}
+              alt="Selected project"
+              className="max-w-full max-h-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
+
       <Footer />
     </div>
   );
-}
+};
 
 export default Portfolio;

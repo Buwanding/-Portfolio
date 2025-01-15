@@ -1,103 +1,95 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
+
 function Services() {
-  const slides = [
-    { id: 1, src: "image1.jpg", alt: "Slide 1" },
-    { id: 2, src: "image2.jpg", alt: "Slide 2" },
-    { id: 3, src: "image3.jpg", alt: "Slide 3" },
-    { id: 4, src: "image4.jpg", alt: "Slide 4" },
-    { id: 5, src: "image5.jpg", alt: "Slide 5" },
-  ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const prevSlide = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
-  };
-
-  const nextSlide = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+      const skills = [
+        {
+          name: "SQL",
+          description:
+            "Proficient in creating, managing, and querying databases.",
+          image: "sql-image-url",
+        },
+        {
+          name: "JavaScript",
+          description:
+            "Experienced in building dynamic and interactive web applications.",
+          image: "javascript-image-url",
+        },
+        {
+          name: "HTML and CSS",
+          description:
+            "Expert in crafting semantic and responsive web designs.",
+          image: "html-css-image-url",
+        },
+        {
+          name: "React",
+          description:
+            "Skilled in building reusable components and managing application state.",
+          image: "react-image-url",
+        },
+        {
+          name: "Tailwind CSS",
+          description:
+            "Proficient in styling web applications with utility-first CSS framework.",
+          image: "tailwind-image-url",
+        },
+        {
+          name: "React Vite",
+          description:
+            "Experienced in fast and efficient development with Vite.",
+          image: "vite-image-url",
+        },
+        {
+          name: "TypeScript",
+          description:
+            "Good understanding of type-safe development with TypeScript.",
+          image: "typescript-image-url",
+        },
+        {
+          name: "PHP",
+          description:
+            "Proficient in server-side programming and developing dynamic websites.",
+          image: "php-image-url",
+        },
+        {
+          name: "Python (Beginner in Machine Learning)",
+          description:
+            "Basic understanding of Python and foundational knowledge in machine learning.",
+          image: "python-image-url",
+        },
+      ];
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow p-4 bg-gray-100 dark:bg-gray-900">
-        <div id="animation-carousel" className="relative w-full">
-          {/* Slides */}
-          <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-            {slides.map((slide, index) => (
-              <div
-                key={slide.id}
-                className={`absolute inset-0 transition-all duration-500 ease-linear ${
-                  index === activeIndex ? "opacity-100 z-10" : "opacity-0"
-                }`}
+      <main className="container mx-auto p-6 flex-grow">
+        <section className="my-12">
+          <h2 className="text-3xl font-bold text-blue-500 mb-6 text-center">
+            Technical Skills
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {skills.map((skill, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white shadow-xl rounded-lg p-6 border-t-4 border-blue-500"
               >
                 <img
-                  src={slide.src}
-                  className="block w-full h-full object-cover"
-                  alt={slide.alt}
+                  src={skill.image}
+                  alt={skill.name}
+                  className="w-16 h-16 mx-auto mb-4 object-contain"
                 />
-              </div>
+                <h3 className="text-xl font-semibold text-blue-500 mb-2">
+                  {skill.name}
+                </h3>
+                <p className="text-gray-700 text-center">{skill.description}</p>
+              </motion.div>
             ))}
           </div>
-
-          {/* Previous Button */}
-          <button
-            type="button"
-            className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            onClick={prevSlide}
-          >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
-              <svg
-                className="w-4 h-4 text-white dark:text-gray-800"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 6 10"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M5 1 1 5l4 4"
-                />
-              </svg>
-              <span className="sr-only">Previous</span>
-            </span>
-          </button>
-
-          {/* Next Button */}
-          <button
-            type="button"
-            className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            onClick={nextSlide}
-          >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
-              <svg
-                className="w-4 h-4 text-white dark:text-gray-800"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 6 10"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="m1 9 4-4-4-4"
-                />
-              </svg>
-              <span className="sr-only">Next</span>
-            </span>
-          </button>
-        </div>
+        </section>
       </main>
       <Footer />
     </div>

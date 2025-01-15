@@ -1,42 +1,49 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
-    <div><footer className="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-        <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+    <footer className="bg-white dark:bg-gray-800 py-6 mt-10 shadow-lg">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center md:flex-row md:justify-between">
+          {/* Copyright Section */}
+          <span className="text-sm text-gray-500 dark:text-gray-400 mb-4 md:mb-0">
             © 2023{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
-              Flowbite™
+            <a
+              href="#"
+              className="hover:underline text-gray-900 dark:text-white font-semibold"
+            >
+              Aladdin A Buwanding
             </a>
             . All Rights Reserved.
           </span>
-          <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+
+          {/* Footer Navigation Links */}
+          <ul className="flex flex-wrap items-center space-x-4 text-sm font-medium text-gray-500 dark:text-gray-400">
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                About
+              <a href="#about" className="hover:underline">
+                About Me
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Privacy Policy
+              <a href="#projects" className="hover:underline">
+                Projects
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
+              <a href="#contact" className="hover:underline">
                 Contact
+              </a>
+            </li>
+            <li>
+              <a href="#blog" className="hover:underline">
+                Blog
               </a>
             </li>
           </ul>
         </div>
-      </footer>
       </div>
-  )
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
