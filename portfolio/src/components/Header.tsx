@@ -75,10 +75,10 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/skills"
                   className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0 font-bold"
                 >
-                  Services
+                 Skills
                 </Link>
               </li>
               <li>

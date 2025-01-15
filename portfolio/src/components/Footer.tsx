@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -7,7 +7,7 @@ function Footer() {
         <div className="flex flex-col items-center md:flex-row md:justify-between">
           {/* Copyright Section */}
           <span className="text-sm text-gray-500 dark:text-gray-400 mb-4 md:mb-0">
-            © 2023{" "}
+            © 2025{" "}
             <a
               href="#"
               className="hover:underline text-gray-900 dark:text-white font-semibold"
@@ -20,19 +20,25 @@ function Footer() {
           {/* Footer Navigation Links */}
           <ul className="flex flex-wrap items-center space-x-4 text-sm font-medium text-gray-500 dark:text-gray-400">
             <li>
-              <a href="#about" className="hover:underline">
-                About Me
-              </a>
+              <Link to="/about-me">
+                <a href="#about" className="hover:underline">
+                  About Me
+                </a>
+              </Link>
             </li>
             <li>
-              <a href="#projects" className="hover:underline">
-                Projects
-              </a>
+              <Link to="/portfolio">
+                <a href="#projects" className="hover:underline">
+                  Projects
+                </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="hover:underline">
-                Contact
-              </a>
+              <Link to="/contact">
+                <a href="#contact" className="hover:underline">
+                  Contact
+                </a>
+              </Link>
             </li>
             <li>
               <a href="#blog" className="hover:underline">

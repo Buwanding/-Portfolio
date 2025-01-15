@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { JavaScript, React, ReactVite, HTMLCSS, SQL, Tailwind, Typescript, Php, Python } from "../assets";
 
-function Services() {
+function Skills() {
 
       const skills = [
         {
@@ -97,4 +97,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Skills;

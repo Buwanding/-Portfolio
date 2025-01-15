@@ -1,10 +1,9 @@
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./screens/Home";
 import Portfolio from "./screens/Portfolio";
 import Contact from "./screens/Contact";
 import AboutMe from "./screens/AboutMe";
-import Services from "./screens/Services";
+import Skills from "./screens/Skills";
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-me" element={<AboutMe />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/skills" element={<Skills />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
