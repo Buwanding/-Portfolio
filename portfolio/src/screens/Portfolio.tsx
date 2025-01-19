@@ -59,7 +59,7 @@ const Portfolio: React.FC = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-700"
+                className="bg-blue-500 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-700"
               >
                 <div
                   className="relative h-48 w-full cursor-pointer overflow-hidden group"
@@ -82,8 +82,8 @@ const Portfolio: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-sky-200">
+                <div className="p-6 bg-blue-500">
+                  <h3 className="text-xl font-semibold mb-2 text-white">
                     {project.title}
                   </h3>
                   <p className="text-gray-300 mb-4">{project.description}</p>
@@ -91,7 +91,7 @@ const Portfolio: React.FC = () => {
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-3 py-1 bg-sky-900 text-sky-200 rounded-full text-sm"
+                        className="px-3 py-1 bg-white text-blue-500 rounded-full text-sm"
                       >
                         {tag}
                       </span>

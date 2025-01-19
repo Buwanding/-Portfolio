@@ -40,11 +40,6 @@ function Footer() {
                 </a>
               </Link>
             </li>
-            <li>
-              <a href="#blog" className="hover:underline">
-                Blog
-              </a>
-            </li>
           </ul>
         </div>
       </div>

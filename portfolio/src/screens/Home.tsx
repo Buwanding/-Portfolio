@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Myphoto } from "../assets";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
           <h2 className="text-2xl md:text-3xl font-medium text-gray-600">
             Web Developer
           </h2>
+          <Link to="/contact">
           <motion.button
             className="px-8 py-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 mt-6"
             whileHover={{ scale: 1.1 }}
@@ -28,6 +30,7 @@ function Home() {
           >
             Contact
           </motion.button>
+          </Link>
           <motion.div
             className="flex justify-center md:justify-start space-x-6 mt-8"
             initial={{ opacity: 0, y: 30 }}

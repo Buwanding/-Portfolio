@@ -6,7 +6,7 @@ function Contact() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4">
-        <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <div className="w-full max-w-3xl p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
           <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-6 text-center uppercase inline-flex items-center">
             <svg
               className="w-5 h-5 me-2.5"
@@ -69,13 +69,18 @@ function Contact() {
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              <a href="mailto:info@company.com" className="hover:underline">
-                info@company.com
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=buwandingaladdin@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                buwandingaladdin@gmail.com
               </a>
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               <a href="tel:2124567890" className="hover:underline">
-                212-456-7890
+                +639566107798
               </a>
             </p>
           </div>
