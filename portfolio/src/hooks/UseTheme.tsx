@@ -1,7 +1,7 @@
 // src/hooks/useTheme.js
 import { useEffect, useState } from "react";
 
-function useTheme() {
+function useTheme(): [string, React.Dispatch<React.SetStateAction<string>>] {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -19,3 +19,4 @@ function useTheme() {
 }
 
 export default useTheme;
+// Update your useTheme hook to always return [string, Dispatch<SetStateAction<string>>]
