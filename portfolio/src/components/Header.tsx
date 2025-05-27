@@ -3,22 +3,20 @@ import { Link } from "react-router-dom";
 import Portfolio from "../assets/portfolio.png";
 
 function Header() {
-  // State to toggle mobile menu visibility
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Function to toggle the menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <header>
-      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 shadow-md">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen ">
+      <nav className="bg-white dark:bg-gray-900 border-gray-200 px-4 lg:px-6 py-2.5 shadow-md dark:shadow-gray-800">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen">
           {/* Logo */}
           <Link to="/" className="flex items-start ml-10">
             <img src={Portfolio} className="mr-3 h-8 sm:h-10" alt="Logo" />
-            <span className="self-center text-2xl font-bold text-blue-500 whitespace-nowrap ">
+            <span className="self-center text-2xl font-bold text-blue-500 dark:text-blue-400 whitespace-nowrap">
               Portfolio
             </span>
           </Link>
@@ -27,7 +25,7 @@ function Header() {
           <button
             onClick={toggleMobileMenu}
             type="button"
-            className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 dark:text-gray-300 rounded-lg lg:hidden hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600"
             aria-controls="mobile-menu"
             aria-expanded={isMobileMenuOpen ? "true" : "false"}
           >
@@ -60,7 +58,7 @@ function Header() {
               <li>
                 <Link
                   to="/"
-                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0 font-bold"
+                  className="block py-2 pr-4 pl-3 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 lg:p-0 font-bold"
                 >
                   Home
                 </Link>
@@ -68,7 +66,7 @@ function Header() {
               <li>
                 <Link
                   to="/about-me"
-                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0 font-bold"
+                  className="block py-2 pr-4 pl-3 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 lg:p-0 font-bold"
                 >
                   About
                 </Link>
@@ -76,15 +74,15 @@ function Header() {
               <li>
                 <Link
                   to="/skills"
-                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0 font-bold"
+                  className="block py-2 pr-4 pl-3 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 lg:p-0 font-bold"
                 >
-                 Skills
+                  Skills
                 </Link>
               </li>
               <li>
                 <Link
                   to="/portfolio"
-                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0 font-bold"
+                  className="block py-2 pr-4 pl-3 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 lg:p-0 font-bold"
                 >
                   Portfolio
                 </Link>
@@ -92,7 +90,7 @@ function Header() {
               <li>
                 <Link
                   to="/contact"
-                  className="block py-2 pr-4 pl-3 text-gray-700 hover:text-blue-500 lg:p-0 font-bold"
+                  className="block py-2 pr-4 pl-3 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 lg:p-0 font-bold"
                 >
                   Contact
                 </Link>

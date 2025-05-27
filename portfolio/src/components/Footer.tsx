@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-800 py-6 mt-10 shadow-lg">
+    <footer className="bg-white dark:bg-gray-800 py-6 mt-10 shadow-lg dark:shadow-gray-900">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center md:flex-row md:justify-between">
           {/* Copyright Section */}
@@ -21,21 +21,21 @@ function Footer() {
           <ul className="flex flex-wrap items-center space-x-4 text-sm font-medium text-gray-500 dark:text-gray-400">
             <li>
               <Link to="/about-me">
-                <a href="#about" className="hover:underline">
+                <a href="#about" className="hover:underline dark:hover:text-white">
                   About Me
                 </a>
               </Link>
             </li>
             <li>
               <Link to="/portfolio">
-                <a href="#projects" className="hover:underline">
+                <a href="#projects" className="hover:underline dark:hover:text-white">
                   Projects
                 </a>
               </Link>
             </li>
             <li>
               <Link to="/contact">
-                <a href="#contact" className="hover:underline">
+                <a href="#contact" className="hover:underline dark:hover:text-white">
                   Contact
                 </a>
               </Link>

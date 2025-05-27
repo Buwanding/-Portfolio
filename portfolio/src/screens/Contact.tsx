@@ -1,9 +1,9 @@
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
 function Contact() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900">
       <Header />
       <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4">
         <div className="w-full max-w-3xl p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -91,4 +91,4 @@ function Contact() {
   );
 }
 
-export default Contact
+export default Contact;

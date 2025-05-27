@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="flex flex-col min-h-screen px-10">
+    <div className="flex flex-col min-h-screen px-10 bg-white dark:bg-gray-900">
       <Header />
       <section className="flex flex-col md:flex-row items-center justify-between min-h-screen px-10 md:px-16 py-8">
         {/* Text Section */}
@@ -16,20 +16,20 @@ function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-800 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-white leading-tight">
             Hi, I'm <span className="text-blue-500">Aladdin</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-medium text-gray-600">
+          <h2 className="text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-300">
             Web Developer
           </h2>
           <Link to="/contact">
-          <motion.button
-            className="px-8 py-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 mt-6"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact
-          </motion.button>
+            <motion.button
+              className="px-8 py-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600 mt-6"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact
+            </motion.button>
           </Link>
           <motion.div
             className="flex justify-center md:justify-start space-x-6 mt-8"
@@ -40,19 +40,19 @@ function Home() {
             {/* Social Icons */}
             <a
               href="#"
-              className="text-gray-500 hover:text-blue-500 transition duration-300"
+              className="text-gray-500 dark:text-gray-300 hover:text-blue-500 transition duration-300"
             >
               <i className="fab fa-linkedin text-3xl"></i>
             </a>
             <a
               href="#"
-              className="text-gray-500 hover:text-blue-500 transition duration-300"
+              className="text-gray-500 dark:text-gray-300 hover:text-blue-500 transition duration-300"
             >
               <i className="fab fa-behance text-3xl"></i>
             </a>
             <a
               href="#"
-              className="text-gray-500 hover:text-blue-500 transition duration-300"
+              className="text-gray-500 dark:text-gray-300 hover:text-blue-500 transition duration-300"
             >
               <i className="fab fa-github text-3xl"></i>
             </a>

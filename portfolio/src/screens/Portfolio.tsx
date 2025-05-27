@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Mobile_PickMeUp, sams, Web_PickMeUp } from "../assets";
@@ -13,19 +13,19 @@ interface Project {
 
 const projects: Project[] = [
   {
-    image: Mobile_PickMeUp, // Changed to absolute path
+    image: Mobile_PickMeUp,
     title: "Mobile PickMeUp",
     description: "Ride hailing app for mobile devices.",
     tags: ["React Native", "Tailwind"],
   },
   {
-    image: sams, // Changed to absolute path
+    image: sams,
     title: "SAMS",
     description: "Student Monitoring System for schools.",
     tags: ["html", "css", "javascript", "php"],
   },
   {
-    image: Web_PickMeUp, // Changed to absolute path
+    image: Web_PickMeUp,
     title: "Website PickMeUp",
     description: "For Admins to manage the Pick Me Up mobile users.",
     tags: ["React", "Tailwind"],
@@ -46,7 +46,7 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900">
       <Header />
 
       <main className="flex-grow p-4 bg-gray-100 dark:bg-gray-900">
@@ -59,14 +59,14 @@ const Portfolio: React.FC = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-blue-500 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-700"
+                className="bg-blue-500 dark:bg-blue-600 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-700 dark:border-gray-600"
               >
                 <div
                   className="relative h-48 w-full cursor-pointer overflow-hidden group"
                   onClick={() => handleImageClick(project.image)}
                 >
                   <img
-                    src={project.image} // Changed to absolute path
+                    src={project.image}
                     alt={`Preview of ${project.title}`}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -82,16 +82,18 @@ const Portfolio: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="p-6 bg-blue-500">
+                <div className="p-6 bg-blue-500 dark:bg-blue-600">
                   <h3 className="text-xl font-semibold mb-2 text-white">
                     {project.title}
                   </h3>
-                  <p className="text-gray-300 mb-4">{project.description}</p>
+                  <p className="text-gray-300 dark:text-gray-200 mb-4">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-3 py-1 bg-white text-blue-500 rounded-full text-sm"
+                        className="px-3 py-1 bg-white text-blue-500 rounded-full text-sm dark:bg-gray-200"
                       >
                         {tag}
                       </span>

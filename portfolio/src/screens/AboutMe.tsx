@@ -11,7 +11,7 @@ function AboutMe() {
         <div className="max-w-4xl mx-auto">
           <motion.a
             href="#"
-            className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-md md:flex-row md:max-w-4xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:scale-105"
+            className="flex flex-col items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md dark:shadow-gray-900 md:flex-row md:max-w-4xl hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300 transform hover:scale-105"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -24,7 +24,7 @@ function AboutMe() {
             />
             <div className="flex flex-col justify-between p-4 leading-normal">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Welcome to <span className="text-blue-500">My Portfolio</span>
+                Welcome to <span className="text-blue-500 dark:text-blue-400">My Portfolio</span>
               </h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                 I am a passionate developer with experience in both front-end
@@ -32,7 +32,7 @@ function AboutMe() {
                 skills, and the work I am proud to showcase.
               </p>
               <motion.button
-                className="px-4 py-2 mt-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 transform hover:scale-105"
+                className="px-4 py-2 mt-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 rounded-lg transition duration-300 transform hover:scale-105"
                 whileHover={{ scale: 1.05 }}
               >
                 <a href="https://github.com/Buwanding">View My Projects</a>
