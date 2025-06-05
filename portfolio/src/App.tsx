@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import { useState } from "react";
 import Home from "./screens/Home";
 import Portfolio from "./screens/Portfolio";
 import Contact from "./screens/Contact";
@@ -34,13 +34,13 @@ function App() {
             <div className="mt-2 absolute right-0 bg-white dark:bg-gray-800 border rounded shadow w-28 text-sm">
               <button
                 onClick={() => handleChange("light")}
-                className="block w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="block w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white"
               >
                 ☀️ Light
               </button>
               <button
                 onClick={() => handleChange("dark")}
-                className="block w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="block w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white"
               >
                 🌙 Dark
               </button>
