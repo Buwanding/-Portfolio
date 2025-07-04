@@ -1,12 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Portfolio from "../assets/portfolio.png";
+import useTheme from "../hooks/UseTheme";
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const [theme, setTheme] = useTheme();
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleChange = (value: string) => {
+    setTheme(value);
+    setShowDropdown(false);
   };
 
   return (
@@ -31,8 +39,9 @@ function Header() {
           >
             <span className="sr-only">Open main menu</span>
             <svg
-              className={`w-6 h-6 transition-transform duration-300 ${isMobileMenuOpen ? "rotate-90" : ""
-                }`}
+              className={`w-6 h-6 transition-transform duration-300 ${
+                isMobileMenuOpen ? "rotate-90" : ""
+              }`}
               aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 20 20"
@@ -48,11 +57,12 @@ function Header() {
 
           {/* Navigation Links */}
           <div
-            className={`${isMobileMenuOpen ? "block" : "hidden"
-              } w-full lg:flex lg:w-auto lg:order-1`}
+            className={`${
+              isMobileMenuOpen ? "block" : "hidden"
+            } w-full lg:flex lg:w-auto lg:order-1`}
             id="mobile-menu"
           >
-            <ul className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
+            <ul className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 items-center">
               <li>
                 <Link
                   to="/"
@@ -92,6 +102,39 @@ function Header() {
                 >
                   Contact
                 </Link>
+              </li>
+              <li className="relative">
+                {" "}
+                {/* Make sure dropdown is positioned relative to this li */}
+                <button
+                  onClick={() => setShowDropdown(!showDropdown)}
+                  className="text-xl bg-white dark:bg-gray-800 dark:text-white rounded-full p-2 shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                  aria-label="Toggle Theme Dropdown"
+                >
+                  {theme === "dark" ? "🌙" : "☀️"}
+                </button>
+                {showDropdown && (
+                  <div className="mt-2 absolute right-0 bg-white dark:bg-gray-800 border rounded shadow w-28 text-sm z-50">
+                    <button
+                      onClick={() => {
+                        handleChange("light");
+                        setShowDropdown(false);
+                      }}
+                      className="block w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white"
+                    >
+                      ☀️ Light
+                    </button>
+                    <button
+                      onClick={() => {
+                        handleChange("dark");
+                        setShowDropdown(false);
+                      }}
+                      className="block w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white"
+                    >
+                      🌙 Dark
+                    </button>
+                  </div>
+                )}
               </li>
             </ul>
           </div>

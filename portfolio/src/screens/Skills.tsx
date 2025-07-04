@@ -11,6 +11,8 @@ import {
   Typescript,
   Php,
   Python,
+  laravel,
+  bootstrap,
 } from "../assets";
 
 function Skills() {
@@ -22,7 +24,8 @@ function Skills() {
     },
     {
       name: "JavaScript",
-      description: "Experienced in building dynamic and interactive web applications.",
+      description:
+        "Experienced in building dynamic and interactive web applications.",
       image: JavaScript,
     },
     {
@@ -32,12 +35,14 @@ function Skills() {
     },
     {
       name: "React",
-      description: "Skilled in building reusable components and managing application state.",
+      description:
+        "Skilled in building reusable components and managing application state.",
       image: React,
     },
     {
       name: "Tailwind CSS",
-      description: "Proficient in styling web applications with utility-first CSS framework.",
+      description:
+        "Proficient in styling web applications with utility-first CSS framework.",
       image: Tailwind,
     },
     {
@@ -47,18 +52,33 @@ function Skills() {
     },
     {
       name: "TypeScript",
-      description: "Good understanding of type-safe development with TypeScript.",
+      description:
+        "Good understanding of type-safe development with TypeScript.",
       image: Typescript,
     },
     {
       name: "PHP",
-      description: "Proficient in server-side programming and developing dynamic websites.",
+      description:
+        "Proficient in server-side programming and developing dynamic websites.",
       image: Php,
     },
     {
       name: "Python (Beginner in Machine Learning)",
-      description: "Basic understanding of Python and foundational knowledge in machine learning.",
+      description:
+        "Basic understanding of Python and foundational knowledge in machine learning.",
       image: Python,
+    },
+    {
+      name: "Laravel (Experienced in Full Stack laravel)",
+      description:
+        "Debugging and transforming projects with custom PDF templates, polished Excel reports, and complete redesigns inline to the customer’s desire.",
+      image: laravel,
+    },
+    {
+      name: "Bootstrap (Beginner in Machine Learning)",
+      description:
+        "Using bootstrap in building and polishing the company's website.",
+      image: bootstrap,
     },
   ];
 

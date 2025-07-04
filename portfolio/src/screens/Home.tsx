@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="flex flex-col min-h-screen px-10 bg-white dark:bg-gray-900">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900">
       <Header />
       <section className="flex flex-col md:flex-row items-center justify-between min-h-screen px-10 md:px-16 py-8">
         {/* Text Section */}

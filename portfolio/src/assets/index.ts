@@ -11,3 +11,5 @@ export { default as React } from "./React.png";
 export { default as Tailwind } from "./Tailwind.png";
 export { default as ReactVite } from "./ReactvVite.png";
 export { default as Myphoto } from "./Myphoto.jpg";
+export { default as bootstrap } from "./bootstrap.jpg";
+export { default as laravel } from "./laravel.png";

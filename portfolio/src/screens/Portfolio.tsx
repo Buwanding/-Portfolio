@@ -30,6 +30,30 @@ const projects: Project[] = [
     description: "For Admins to manage the Pick Me Up mobile users.",
     tags: ["React", "Tailwind"],
   },
+  {
+    image: "#",
+    title: "HR Portal",
+    description: "Design the frontend for the HR portal.",
+    tags: ["Blade", "Bootstrap", "Laravel", "Css"],
+  },
+  {
+    image: "#",
+    title: "Finance Portal",
+    description: "Design the frontend for the Finance portal.",
+    tags: ["Blade", "Bootstrap", "Laravel", "Css"],
+  },
+  {
+    image: "#",
+    title: "Accounting Portal",
+    description: "Design the frontend for the Finance portal.",
+    tags: ["Blade", "Bootstrap", "Laravel", "Css", "JavaScript"],
+  },
+  {
+    image: "#",
+    title: "Pdf Template Generator",
+    description: "Design a pdf template generator.",
+    tags: ["Blade", "Bootstrap", "Laravel", "Css"],
+  },
 ];
 
 const Portfolio: React.FC = () => {
