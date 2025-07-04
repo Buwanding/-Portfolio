@@ -75,7 +75,7 @@ function Skills() {
       image: laravel,
     },
     {
-      name: "Bootstrap (Beginner in Machine Learning)",
+      name: "Bootstrap",
       description:
         "Using bootstrap in building and polishing the company's website.",
       image: bootstrap,
